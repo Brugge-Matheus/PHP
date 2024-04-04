@@ -27,7 +27,7 @@
         $newPrice = $price + ($price * $readjustment / 100);
     ?>
 
-    <section class="red">
+    <section class="res">
         <h2>Resultado do Reajuste</h2>
         <p>O produto que custava <strong>R$<?= number_format($price, 2, ',', '.') ?></strong>, com <strong><?= $readjustment ?>%</strong> de aumento vai passar a custar <strong>R$<?= number_format($newPrice, 2, ',', '.') ?></strong> a partir de agora</p>
     </section>
