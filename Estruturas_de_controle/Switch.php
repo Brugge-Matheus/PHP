@@ -56,4 +56,25 @@
     endswitch;
  ?>
 
+
+<?php 
+    $tipo = 'texto';
+
+    switch($tipo) {
+        case 'video':
+            echo "É um vídeo";
+            break;
+
+        case 'foto':
+            echo "É uma foto";
+            break;
+
+        case 'texto':
+            echo "É um texto";
+            break;
+
+        default:
+            echo "Nenhuma das opções foi validada";
+    }
+?>
 <!---------------------------------------------------------------------------------------------------------------------->

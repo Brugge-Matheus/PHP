@@ -84,3 +84,17 @@
 Se quiser sim mano.
 <?php endif; ?>
 
+
+<?php 
+    $name = 'Matheus';
+
+
+
+
+    $completeName = $name;
+    $completeName .= isset($lastName) ? $lastName :  ''; //or
+    $completeName .= $lastName ??'';
+
+    echo $completeName;
+?>
+

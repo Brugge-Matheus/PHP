@@ -55,6 +55,13 @@
     }
 ?>
 
+<?php 
+    for($num = 0; $num <= 23; $num += 1):
+        echo "N: $num";
+
+    endfor;
+?>
+
 
 <?php 
     for($n; $n <= 10; $n++):
