@@ -37,10 +37,6 @@
         echo "Resultado" . ($key + 1) . ":\n" . ($value + $value) . "<br>";
         echo "<br>";
     }
-
-    foreach($numbers $key as $value) {
-        echo
-    }
     
 
 ?>
