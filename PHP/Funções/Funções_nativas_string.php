@@ -31,3 +31,4 @@ number_format($num, 2, ',', '.'); // Formata um número com duas casas decimais,
 
 
 
+
