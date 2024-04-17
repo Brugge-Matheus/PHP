@@ -24,7 +24,7 @@ podendo ainda tem arrays dentro de arrays -->
 
 <?php 
     $caracteristicas = array(
-        'nome' => 'Ryan',
+        'nome' => 'Jah',
         'idade' => 18,
         'sexo' => 'masculino',
         'atributos' => array(
