@@ -9,6 +9,11 @@ class Post {
     public bool $isSlider;
     public int $qtdItn = 1;
 
+    public function __construct($likes = 0, $comments = array('0')) {
+        $this->likes = $likes;
+        $this->comments = $comments;
+    }
+
     public function moreLike() {
         $this -> likes++;
     }
@@ -16,30 +21,8 @@ class Post {
 }
 
 $post1 = new Post();
-$post1 -> likes = 3;
 echo "LIKE POST1: " .$post1->likes ."<br>";
-$post1 -> moreLike();
 
 
 $post2 = new Post();
-$post2 -> likes = 5;
-
-
-class Item {
-    public $name;
-    public $pontuation;
-    private $idUser;
-    
-    public function apresentation() {
-        echo "Selected name is " .$this->name;
-    }
-
-}
-
-$item1 = new Item();
-$item1 -> name = 'Matheus';
-
-
-$item1 -> apresentation();
-
 
