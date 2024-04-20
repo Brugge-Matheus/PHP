@@ -1,6 +1,6 @@
 <?php 
 class Post {
-    protected $teste;
+    protected $test;
     private $id;
     public int $likes;
     public array $comments = array();
@@ -23,5 +23,23 @@ $post1 -> moreLike();
 
 $post2 = new Post();
 $post2 -> likes = 5;
+
+
+class Item {
+    public $name;
+    public $pontuation;
+    private $idUser;
+    
+    public function apresentation() {
+        echo "Selected name is " .$this->name;
+    }
+
+}
+
+$item1 = new Item();
+$item1 -> name = 'Matheus';
+
+
+$item1 -> apresentation();
 
 
