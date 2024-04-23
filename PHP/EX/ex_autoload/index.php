@@ -1,10 +1,7 @@
 <?php 
-spl_autoload_register(function ($class) {
-    if(file_exists('includes/'.$class.'.php')) {
-        include 'includes/'.$class.'.php';
-    }
-});
+include 'autoload.php';
 
-$postImg = new Picture();
+
+$postImg = new PostBase\Picture();
 $postImg->setLikes(180);
 echo $postImg->getLikes();

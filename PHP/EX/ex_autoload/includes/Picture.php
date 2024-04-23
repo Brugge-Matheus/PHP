@@ -1,5 +1,7 @@
 <?php 
 
+namespace PostBase;
+
 interface PostExample {
     public function setLikes($i);  
     public function getLikes(); 
@@ -44,4 +46,8 @@ class Picture extends Post {
     public function getUrl() {
         return $this->url ?? 'Url inválida';
     }
+}
+
+class Video extends Post {
+ 
 }
