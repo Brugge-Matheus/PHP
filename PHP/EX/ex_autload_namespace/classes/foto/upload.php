@@ -1,6 +1,6 @@
 <?php 
 
-namespace foto;
+namespace classes\foto;
 
 class Upload {
 
