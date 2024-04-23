@@ -1,7 +1,7 @@
 <?php 
 class Post {
     private int $id;
-    private int $likes;
+    private  $likes;
 
     protected function setId($i) {
         $this->id = $i;
@@ -11,7 +11,7 @@ class Post {
         return $this->id;
     }
 
-    protected function setLikes($i) {
+    public function setLikes(int $i = 1) {
         $this->likes = $i;
     }
 
@@ -25,7 +25,7 @@ class Foto extends Post {
 
     public function __construct($id = 1) {
         $this->setId($id);
-        $this->setLikes(380);
+        $this->setLikes(280);
     }
 
     public function setUrl($i) {
@@ -43,6 +43,10 @@ class Foto extends Post {
 class Texto extends Post {
     private string $tittle;
     private string $body;
+
+    public function __construct() {
+        $this->setLikes(120);
+    }
 
     public function setTittle($i) {
         $this->tittle = $i;
@@ -63,9 +67,9 @@ class Texto extends Post {
 
 }
 
-$foto1 = new Foto();
-$texto1 = new Texto();
-$foto1->setUrl('https://www.youtube.com/');
-// $foto1->setUrl('If you want yes bro');
+// $foto1 = new Foto();
+// $texto1 = new Texto();
+// $foto1->setUrl('https://www.youtube.com/');
+// // $foto1->setUrl('If you want yes bro');
 
-echo "- Id: ".$foto1->getId()."<br>- Likes: ".$foto1->getLikes()."<br>- url: ".$foto1->getUrl();
+// echo "- Id: ".$foto1->getId()."<br>- Likes: ".$foto1->getLikes()."<br>- url: ".$foto1->getUrl();
