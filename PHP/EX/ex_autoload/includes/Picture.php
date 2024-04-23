@@ -1,7 +1,14 @@
 <?php 
 namespace includes;
 
-class Post {
+interface PostBase {
+    public function setLikes($i);
+    public function getLikes();
+    public function setNumComments($i);
+    public function getNumComments();
+};
+
+class Post implements PostBase {
     private int $likes;
     private int $numComments;
 
