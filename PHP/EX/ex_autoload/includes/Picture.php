@@ -1,17 +1,9 @@
 <?php 
+namespace includes;
 
-namespace PostBase;
-
-interface PostExample {
-    public function setLikes($i);  
-    public function getLikes(); 
-    public function setNumComments($i); 
-    public function getNumComments(); 
-}
-
-class Post implements PostExample {
-    protected int $likes;
-    protected int $numComments;
+class Post {
+    private int $likes;
+    private int $numComments;
 
     public function setLikes($i) {
         if($i >= 1) {
@@ -35,19 +27,41 @@ class Post implements PostExample {
 }
 
 class Picture extends Post {
-    private string $url;
+    private string $urlImg;
 
-    public function setUrl(string $u) {
+    public function __construct($setLikes, $setNumComments, $urlImg) {
+        $this->setLikes($setLikes);
+        $this->setNumComments($setNumComments);
+        $this->setUrlImg($urlImg);
+    }
+
+    public function setUrlImg(string $u) {
         if(filter_var($u, FILTER_VALIDATE_URL)) {
-            $this->url = $u;
+            $this->urlImg = "<strong>" .$u. "</strong>";
         }
     }
 
-    public function getUrl() {
-        return $this->url ?? 'Url inválida';
+    public function getUrlImg() {
+        return $this->urlImg ?? '<strong>Url inválida</strong>';
     }
 }
 
 class Video extends Post {
- 
+    private string $urlVideo;
+
+    public function __construct($setLikes, $setNumComments, $urlVideo) {
+        $this->setLikes($setLikes);
+        $this->setNumComments($setNumComments);
+        $this->setUrlVideo($urlVideo);
+    }
+
+    public function setUrlVideo($u) {
+        if(filter_var($u, FILTER_VALIDATE_URL)) {
+            $this->urlVideo = "<strong>" .$u. "</strong>";
+        }
+    }
+
+    public function getUrlVideo() {
+        return $this->urlVideo ?? '<strong>Url inválida</strong>';
+    }
 }
