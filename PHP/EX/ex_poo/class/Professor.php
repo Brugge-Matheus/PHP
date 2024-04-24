@@ -14,7 +14,7 @@ class Teacher extends Person{
     }
 
 
-
+    
     
     
          
