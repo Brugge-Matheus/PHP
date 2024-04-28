@@ -1,21 +1,46 @@
 <?php 
 require 'Mysql_config.php';
+
+$lista = [];
+$sql = $pdo->query("SELECT * FROM clientes");
+if($sql->rowCount() > 0) {
+    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+}
+
+include 'head.php';
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD</title>
-</head>
 <body>
-    <a href="insert.php">INSERIR</a>
+    <a href="create.php">
+        <p>ADICIONAR USÚARIO
+            <i class="fa-solid fa-circle-plus"></i>
+        </p>
+        
+    </a>
     <table border="1" width="100%">
         <th>ID</th>
         <th>NOME</th>
+        <th>TELEFONE</th>
         <th>EMAIL</th>
+        <th>DATA DE CADASTRO</th>
         <th>AÇÕES</th>
-    </table>
-    
+        <?php foreach($lista as $users): ?>
+            <tr>
+                <td><?= $users['idCliente'] ?></td>
+                <td><?= $users['nomeCompleto'] ?></td>
+                <td><?= $users['telefone'] ?></td>
+                <td><?= $users['email'] ?></td>
+                <td><?= $users['dataCadastro'] ?></td>
+                <td align="center">
+                    <a href="editar.php?id=<?=$users['idCliente']?>">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                    <a href="deletar.php?id=<?=$users['idCliente']?>" onclick="return confirm('Tem certeza que deseja excluir o usúario <?=$users['nomeCompleto']?>?')">
+                        <i class="fa-solid fa-trash"></i>
+                    </a>
+            
+                </td>
+            </tr>
+        <?php endforeach;?>
+    </table>    
 </body>
 </html>
