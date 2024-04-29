@@ -12,15 +12,11 @@
             color: black;
         }
 
-        p {
+        a {
             font-family: Arial, Helvetica, sans-serif;
             color: black;
         }
 
-        p:hover {
-            transition: 0.2s;
-            color: green;
-        }
 
         /* Tabela */
         table {
@@ -108,7 +104,8 @@
             height: 100px; /* Ajuste conforme necessário */
         }
 
-        .form-group input[type="submit"] {
+        .form-group input[type="submit"],
+        .form-group input[type="button"] {
             padding: 10px 20px;
             background-color: #333;
             color: #fff;
@@ -117,7 +114,8 @@
             cursor: pointer;
         }
 
-        .form-group input[type="submit"]:hover {
+        .form-group input[type="submit"]:hover,
+        .form-group input[type="button"]:hover {
             background-color: #555;
         }
 

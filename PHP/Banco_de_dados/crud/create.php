@@ -16,6 +16,10 @@ include 'head.php';
             <input type="email" name="email">
 
             <input type="submit" value="Adicionar">
+
+            <a href="index.php">
+                <input type="button" value="Voltar">
+            </a>
         </form>
     </div>
     

@@ -11,10 +11,8 @@ include 'head.php';
 ?>
 <body>
     <a href="create.php">
-        <p>ADICIONAR USÚARIO
-            <i class="fa-solid fa-circle-plus"></i>
-        </p>
-        
+        ADICIONAR USÚARIO
+        <i class="fa-solid fa-circle-plus"></i>  
     </a>
     <table border="1" width="100%">
         <th>ID</th>

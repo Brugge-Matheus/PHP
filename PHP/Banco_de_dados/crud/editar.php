@@ -26,11 +26,17 @@ $info = [];
         
             <label for="name">Nome: </label>
             <input type="text" name="name" value="<?=$info['nomeCompleto']?>">
+
             <label for="phone">Telefone: </label>
             <input type="number" name="phone" value="<?=$info['telefone']?>">
             <label for="email">E-mail: </label>
+            
             <input type="email" name="email" value="<?=$info['email']?>">
             <input type="submit" value="Alterar">
+
+            <a href="index.php">
+                <input type="button" value="Voltar">
+            </a>
         </form>
     </div>
 
