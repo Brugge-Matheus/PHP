@@ -23,7 +23,7 @@ class Cliente {
     }
 
     public function setTelefone($t) {
-        $this->telefone = filter_var($t, FILTER_SANITIZE_NUMBER_INT);
+        $this->telefone = $t;
     }
 
     public function getTelefone() {
@@ -48,7 +48,8 @@ class Cliente {
 interface ClienteDAO {
     public function add(Cliente $u);
     public function findAll();
-    public function findById( $id);
+    public function findById($id);
+    public function findByEmail($e);
     public function update(Cliente $u);
     public function delete( $id);
 }

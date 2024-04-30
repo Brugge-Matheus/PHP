@@ -1,6 +1,9 @@
 <?php 
 require 'Mysql_config.php';
+require 'dao/ClienteDAOMysql.php';
 include 'head.php';
+
+$clietenDao = new ClienteDAOMysql($pdo);
 ?>
 <body>
     <h1>Adicionar Usuario</h1>
@@ -36,19 +39,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if($sql->rowCount() === 0) {
         if($name && $phone && $email) {
-            $sql = $pdo->prepare("INSERT INTO clientes (idCliente, nomeCompleto, telefone, email, dataCadastro) VALUES (DEFAULT, :name, :phone , :email, :date)");
-            $sql->bindValue(':name', $name);
-            $sql->bindValue(':phone', $phone);
-            $sql->bindValue(':email', $email);
-            $sql->bindValue(':date', $date);
-            $sql->execute();
+            if($clietenDao->findByEmail($email) === false) {
+                $novoCliente = new Cliente();
+                $novoCliente->setNomeCompleto($name);
+                $novoCliente->setTelefone($phone);
+                $novoCliente->setEmail($email);
+                $novoCliente->getDataCadastro();
+
+                $clietenDao->add($novoCliente);
+
+                header('Location: index.php');
+                exit;
+
+            } else {
+                header('Location: create.php');
+                exit;
+            }
     
-            header('Location: index.php');
-            exit;
             
-        } else {
-            header('Location: create.php');
-            exit;
+            
+        
         }
     } else {
         header('Location: create.php');

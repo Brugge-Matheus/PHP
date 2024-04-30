@@ -1,37 +1,36 @@
 <?php 
 require 'Mysql_config.php';
-include 'head.php';
+require 'dao/ClienteDAOMysql.php';
+require 'head.php';
 
-$info = [];
-        $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+$clienteDao = new ClienteDAOMysql($pdo);
 
-        if($id) {
-            $sql = $pdo->prepare("SELECT * FROM clientes WHERE idCliente = :id");
-            $sql->bindValue('id', $id);
-            $sql->execute();
+$info = false;
+$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 
-            $info = $sql->fetch(PDO::FETCH_ASSOC);
+    if($id) {
+        $usuario = $clienteDao->findById($id);
             
-
-        } else {
-            header('Location: index.php');
-        }
+    } else if($usuario === false) {
+        header('Location: index.php');
+        exit;
+    }
 
 ?>
 <body>
-    <h1>Editar Usuario <?=$info['nomeCompleto']?></h1>
+    <h1>Editar Usuario <?=$usuario->getNomeCompleto()?></h1>
     <div class="form-container">
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post" class="form-group">
             <input type="hidden" name="id" value="<?=$info['idCliente']?>">
         
             <label for="name">Nome: </label>
-            <input type="text" name="name" value="<?=$info['nomeCompleto']?>">
+            <input type="text" name="name" value="<?=$usuario->getNomeCompleto()?>">
 
             <label for="phone">Telefone: </label>
-            <input type="number" name="phone" value="<?=$info['telefone']?>">
+            <input type="number" name="phone" value="<?=$usuario->getTelefone()?>">
             <label for="email">E-mail: </label>
             
-            <input type="email" name="email" value="<?=$info['email']?>">
+            <input type="email" name="email" value="<?=$usuario->getEmail()?>">
             <input type="submit" value="Alterar">
 
             <a href="index.php">

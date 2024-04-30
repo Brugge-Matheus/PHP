@@ -1,11 +1,11 @@
 <?php 
 require 'Mysql_config.php';
 require 'head.php';
-require 'dao/UsuarioDAOMysql.php';
+require 'dao/ClienteDAOMysql.php';
 
-$usuarioDao = new UsuarioDAOMysql($pdo);
+$clienteDao = new ClienteDAOMysql($pdo);
 
-$lista = $usuarioDao->findAll();
+$lista = $clienteDao->findAll();
 
 ?>
 
