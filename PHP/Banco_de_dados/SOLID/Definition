@@ -1,0 +1,15 @@
+Principios do SOLID
+
+S -> Single Responsibility Principe (Princípio da Responsabilidade Única)
+
+
+O -> Open-Close Principle (Princípio aberto-fechado)
+
+
+L -> Liskov Substitution Principe (Princípio da Substituição de Liskov)
+
+
+I -> Interface Segregation Principle (Princípio da Segregação de Interface)
+
+
+D -> Dependency Inversion Principle (Princípio da Inversão de Dependências)

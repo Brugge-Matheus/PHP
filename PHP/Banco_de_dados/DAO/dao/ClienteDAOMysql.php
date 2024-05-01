@@ -1,11 +1,11 @@
 <?php 
-require_once 'models/Clientes.php';
+require 'models/Clientes.php';
 
 class ClienteDAOMysql implements ClienteDAO {
     private $pdo;
 
-    public function __construct(PDO $conn) {
-        $this->pdo = $conn;
+    public function __construct(PDO $driver) {
+        $this->pdo = $driver;
     }
 
     public function add(Cliente $user) {
@@ -63,43 +63,46 @@ class ClienteDAOMysql implements ClienteDAO {
     }
 
     public function findById($id) {
-        $sql = $this->pdo->prepare("SELECT * FROM clientes WHERE idCliente = :id;");
+        $sql = $this->pdo->prepare("SELECT * FROM clientes WHERE idCliente = :id");
         $sql->bindValue(':id', $id);
         $sql->execute();
-
+    
         if($sql->rowCount() > 0) {
             $data = $sql->fetch();
-
+    
             $user = new Cliente();
             $user->setIdCliente($data['idCliente']);
             $user->setNomeCompleto($data['nomeCompleto']);
             $user->setTelefone($data['telefone']);
             $user->setEmail($data['email']);
-
+    
             return $user;
-
         } else {
-            return false;
+            return true;
         }
-
-
     }
+    
 
     public function update(Cliente $user) {
-        $sql = $this->pdo->prepare("UPDATE clientes SET nomeCompleto = :nomeCompleto, telefone = :telefone, email = :email, dataCadastro = :data WHERE idCliente = :id");
-
+        $sql = $this->pdo->prepare("UPDATE clientes SET nomeCompleto = :nomeCompleto, telefone = :telefone, email = :email, dataCadastro = :data WHERE idCliente = :id;");
+    
         $sql->bindValue(':id', $user->getIdCliente());
         $sql->bindValue(':nomeCompleto', $user->getNomeCompleto());
         $sql->bindValue(':telefone', $user->getTelefone());
         $sql->bindValue(':email', $user->getEmail());
         $sql->bindValue(':data', $user->getDataCadastro());
         $sql->execute();
-
+    
         return true;
     }
+    
 
     public function delete($id) {
+        $sql = $this->pdo->prepare("DELETE FROM clientes WHERE idCliente = :id;");
+        $sql->bindValue(':id', $id);
+        $sql->execute();
 
+        return true;
     }
 
 }

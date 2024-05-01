@@ -11,7 +11,7 @@ $lista = $clienteDao->findAll();
 
 <body>
     <a href="create.php">
-        ADICIONAR USÚARIO
+        ADICIONAR USUARIO
         <i class="fa-solid fa-circle-plus"></i>
     </a>
     <table border="1" width="100%">
@@ -29,10 +29,10 @@ $lista = $clienteDao->findAll();
             <td><?= $cliente->getEmail() ?></td>
             <td><?= $cliente->GetDataCadastro() ?></td>
             <td align="center">
-                <a href="editar.php?id=<?=$cliente->getIdCliente()?>">
-                    <i class="fa-solid fa-pen-to-square"></i>
+                <a href="editar.php?idCliente=<?=$cliente->getIdCliente()?>">
+                    <i class="fa-solid fa-edit"></i>
                 </a>
-                <a href="deletar.php?id=<?=$cliente->getIdCliente()?>"
+                <a href="deletar.php?idCliente=<?=$cliente->getIdCliente()?>"
                     onclick="return confirm('Tem certeza que deseja excluir o usúario <?=$cliente->getNomeCompleto()?>?')">
                     <i class="fa-solid fa-trash"></i>
                 </a>
