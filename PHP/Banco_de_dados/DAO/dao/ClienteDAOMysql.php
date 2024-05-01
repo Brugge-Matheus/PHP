@@ -85,8 +85,17 @@ class ClienteDAOMysql implements ClienteDAO {
 
     }
 
-    public function update(Cliente $u) {
+    public function update(Cliente $user) {
+        $sql = $this->pdo->prepare("UPDATE clientes SET nomeCompleto = :nomeCompleto, telefone = :telefone, email = :email, dataCadastro = :data WHERE idCliente = :id");
 
+        $sql->bindValue(':id', $user->getIdCliente());
+        $sql->bindValue(':nomeCompleto', $user->getNomeCompleto());
+        $sql->bindValue(':telefone', $user->getTelefone());
+        $sql->bindValue(':email', $user->getEmail());
+        $sql->bindValue(':data', $user->getDataCadastro());
+        $sql->execute();
+
+        return true;
     }
 
     public function delete($id) {
