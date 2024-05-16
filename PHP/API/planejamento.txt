@@ -1,0 +1,25 @@
+Estrutura do projeto DevNote (Sistema de anotações)
+
+Oque o projeto precisa fazer?
+- Listar as anotações
+- Pegar informações de uma anotação
+- Inserir anotações novas
+- Atualizar uma anotação
+- Deletar uma anotação
+
+
+Qual a estrutura de dados?
+- local para armazenar as anotações
+- Id
+- Title
+- Body
+
+
+Quais os endpoints?
+- (METODO) /url (PARÂMETROS)
+
+- (GET) /api/notes - /api/getall.php - (READ)
+- (GET) /api/note/id - /api/get.php?id=123 - (ADVANCED READ)
+- (POST) /api/note (tittle, body) - (CREATE)
+- (PUT) /api/note/id - (UPDATE)
+- (DELETE) /api/note/id - (DELETE)
