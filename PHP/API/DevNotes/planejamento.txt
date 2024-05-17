@@ -20,6 +20,6 @@ Quais os endpoints?
 
 - (GET) /api/notes - /api/getall.php - (READ)
 - (GET) /api/note/id - /api/get.php?id=123 - (ADVANCED READ)
-- (POST) /api/note (tittle, body) - (CREATE)
-- (PUT) /api/note/id - (UPDATE)
-- (DELETE) /api/note/id - (DELETE)
+- (POST) /api/note (tittle, body) - /api/insert.php (title, body) - (CREATE)
+- (PUT) /api/note/id - /api/update.php (id, title, body) - (UPDATE) 
+- (DELETE) /api/note/id - /api/delete.php (id) - (DELETE)
