@@ -1,4 +1,5 @@
-<?php require '../app/functions/pages.php'?>
+<?php require '../bootstrap.php'?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,6 +9,32 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            width: 70vw;
+        }
+
+        input {
+            padding: 10px;
+        }
+
+        .danger {
+            background-color: red;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+        }
+
+        .sucess {
+            background-color: green;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 25px;
         }
     </style>
 </head>
