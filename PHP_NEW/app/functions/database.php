@@ -45,8 +45,19 @@ function listAll($table) {
     return $list->fetchAll(); 
 }
 
-function read() {
+function find($table, $field, $value) {
+    $value = filter_var($value, FILTER_SANITIZE_NUMBER_INT);
 
+    $pdo = connect();
+    
+    $query = "SELECT * FROM {$table} WHERE {$field} = :{$field};";
+
+    $find = $pdo->prepare($query);
+    $find->bindValue("$field", $value);
+
+    $find->execute();
+
+    return $find->fetch();
 }
 
 function update() {
