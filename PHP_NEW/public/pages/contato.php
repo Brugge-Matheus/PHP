@@ -1,4 +1,5 @@
-<?= get('message') ?>
+<?= getMessage('message') ?>
+<?= getMessage('exception') ?>
     <form action="../app/form/contato_mod.php" method="post">
         <h2>Formulário</h2>
 
@@ -22,5 +23,7 @@
                 <textarea name="text" id="text" cols="30" rows="10"></textarea>
             </div>
 
-            <input type="submit" value="Enviar">
+            <div class="form-group">
+                <input type="submit" value="Enviar">
+            </div>
 </form>

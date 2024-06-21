@@ -1,12 +1,13 @@
 <?php 
-function flash($key, $message, $type = 'danger') {
+function flash(string $key, string $message, string $type = 'danger') {
     
     if(!isset($_SESSION['flash'][$key])) {
-        $_SESSION['flash'][$key] = "<span class='$type'>" .$message. "</span>";
+        $_SESSION['flash'][$key] = "<span class='{$type}'>" .$message. "</span>";
     }
 }
 
-function get($key) {
+function getMessage($key) {
+    $message = null;
     
     if(isset($_SESSION['flash'][$key])) {
 

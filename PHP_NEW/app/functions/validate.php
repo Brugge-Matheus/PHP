@@ -25,7 +25,7 @@ function validate(array $fields) {
     return (object) $validate;
 }
 
-function isEmpty() {
+function isEmpty(): bool {
     $request = request();
     $empty = false;
 
