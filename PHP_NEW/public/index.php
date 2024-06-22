@@ -1,4 +1,5 @@
 <?php require '../bootstrap.php'?>
+<?php require '../vendor/autoload.php'?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -23,6 +24,10 @@
 
         input {
             padding: 10px;
+        }
+
+        .flash-container {
+            display: flex;
         }
 
         .danger {
@@ -61,6 +66,8 @@
     </style>
 </head>
 <body>
+    <?=getMessage('message')?>
+
     <div class="container">
         <?php require load()?>
     </div>

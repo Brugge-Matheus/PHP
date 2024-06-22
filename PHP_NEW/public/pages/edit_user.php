@@ -1,3 +1,4 @@
+<?php getMessage('message')?>
 <form action="../app/form/edit_user_mod.php" method="post">
     <h2>Editar usuario</h2>
 
@@ -6,6 +7,7 @@
     <div class="form-group">
         <input type="hidden" name="id" id="id" value="<?= $user->id?>">
     </div>
+
     <div class="form-group">
         <label for="name">Nome</label>
         <input type="text" name="name" id="name" value="<?= $user->name?>">

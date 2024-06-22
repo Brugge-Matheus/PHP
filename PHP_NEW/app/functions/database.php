@@ -60,10 +60,46 @@ function find($table, $field, $value) {
     return $find->fetch();
 }
 
-function update() {
+function update(string $table, object $fields, array $where) {
+    $pdo = connect();
 
+    if(!is_array($fields)) {
+        $fields = (array) $fields;
+    }
+
+    $data = array_map(function($field) {
+        return "$field = :{$field}";
+        
+    }, array_keys($fields));
+
+    $placeholders = implode(', ', $data);
+
+    $whereClauses = $where[0] ." = :". $where[0];
+
+    $query = "UPDATE {$table} SET {$placeholders} WHERE {$whereClauses}";
+
+    $update = $pdo->prepare($query);
+
+    $update->bindValue(":$where[0]", $where[1]);
+
+    foreach($fields as $key => $field) {
+        $update->bindValue(":$key", $field);
+    }
+
+    return $update->execute();
 }
 
-function delete() {
+function delete(string $table, array $fields) {
+    $pdo = connect();
+
+    $whereClauses = $fields[0] .' = :'. $fields[0];
+
+    $query = "DELETE FROM {$table} WHERE {$whereClauses};";
+
+    $delete = $pdo->prepare($query);
+
+    $delete->bindValue(":$fields[0]", $fields[1]);
+
+    return $delete->execute();
 
 }

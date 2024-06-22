@@ -1,5 +1,4 @@
-<?= getMessage('message') ?>
-<?= getMessage('exception') ?>
+
     <form action="../app/form/contato_mod.php" method="post">
         <h2>Formulário</h2>
 

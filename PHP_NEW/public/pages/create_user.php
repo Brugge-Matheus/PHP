@@ -1,4 +1,4 @@
-<?= getMessage('message')?>
+
 <form action="../app/form/create_user_mod.php" method="post">
         <h2>Criar usúario</h2>
 

@@ -1,6 +1,5 @@
 <h2>Pagina home</h2>
 
-
 <div class="create-user">
     <a href="./?page=create_user">
         <button>
@@ -32,7 +31,7 @@
                     Editar
                 </a>
                 |
-                <a href="" onclick="return confirm('Tem certeza que deseja excluir o usúario?')">
+                <a href="../app/form/delete_user_mod.php?id=<?=$users->id?>" onclick="return confirm('Tem certeza que deseja excluir o usúario?')">
                     Apagar
                 </a>
 
