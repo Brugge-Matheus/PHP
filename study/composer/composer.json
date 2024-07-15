@@ -1,0 +1,25 @@
+{
+    "name": "mathe/composer",
+    "description": "Breve estudo de como utilizar o composer",
+
+    "minimum-stability": "stable",
+
+    "require": {
+        "symfony/var-dumper": "3.3.6",
+        "phpmailer/phpmailer": "6.6.0"
+
+    },
+
+    "autoload": {
+        "psr-4": {
+            "app\\Utils\\": "src/Utils/"
+        }
+    },
+    
+    "authors": [
+        {
+            "name": "Brugge-Matheus",
+            "email": "128723144+Brugge-Matheus@users.noreply.github.com"
+        }
+    ]
+}
