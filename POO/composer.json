@@ -1,0 +1,22 @@
+{
+    "name": "mathe/poo",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        },
+
+        "files": [
+            
+        ]
+    },
+    "authors": [
+        {
+            "name": "Matheus Brugge Milczwski",
+            "email": "128723144+Brugge-Matheus@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "league/plates": "^3.5",
+        "symfony/var-dumper": "^7.1"
+    }
+}
