@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/archives/aula_013" isTestSource="false" packagePrefix="sys4soft" />
+      <sourceFolder url="file://$MODULE_DIR$/archives/aula_015" isTestSource="false" packagePrefix="sys4soft" />
+      <sourceFolder url="file://$MODULE_DIR$/archives/aula_016" isTestSource="false" packagePrefix="sys4soft" />
+      <sourceFolder url="file://$MODULE_DIR$/archives/aula_019/libraries" isTestSource="false" packagePrefix="sys4soft" />
+      <sourceFolder url="file://$MODULE_DIR$/archives/aula_020/libraries" isTestSource="false" packagePrefix="sys4soft" />
+      <sourceFolder url="file://$MODULE_DIR$/archives/aula_021/libraries" isTestSource="false" packagePrefix="sys4soft" />
+      <sourceFolder url="file://$MODULE_DIR$/archives/aula_022/libraries" isTestSource="false" packagePrefix="sys4soft" />
+      <sourceFolder url="file://$MODULE_DIR$/archives/aula_023/libraries" isTestSource="false" packagePrefix="sys4soft" />
+      <sourceFolder url="file://$MODULE_DIR$/archives/aula_024/libraries" isTestSource="false" packagePrefix="sys4soft" />
+      <sourceFolder url="file://$MODULE_DIR$/archives/aula_025/libraries" isTestSource="false" packagePrefix="sys4soft" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
