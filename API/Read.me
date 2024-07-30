@@ -1,0 +1,32 @@
+Uso de uma API
+
+Requisição
+- Igual o acesso a um site normal
+- GET, POST, PUT, DELETE, OPTIONS
+- Cabeçalhos
+
+Retorno
+- Texto puro
+- XML
+- Json
+
+
+Estrutura de uma API na prática (DEVNOTES)
+
+Oque o projeto vai fazer?
+- CRUD
+- Pegar informações especificas de uma anotação
+
+Qual a estrutura de dados?
+- Local para armazenar
+- id
+- tittle
+- body
+- created_at
+
+Quais os endpoints? (METHOD) url (PARAMETERS)
+- (GET) /api/notes - /api/getall.php
+- (GET) /api/note/{id} - /api/get.php (id)
+- (POST) /api/note (tittle, body, created_at) - /api/insert.php (tittle, body, created_at)
+- (PUT) /api/note/{id} (tittle, body) - /api/update.php (tittle, body)
+- (DELETE) /api/note/{id} - /api/get.php (id)
