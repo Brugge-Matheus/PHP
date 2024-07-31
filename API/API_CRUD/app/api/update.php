@@ -17,11 +17,7 @@ if ($requestMethod === 'put') {
         $pdo = connect();
 
         $sql = $pdo->prepare("UPDATE notes SET tittle = :tittle, body = :body WHERE id = :id");
-        $result = [
-            'id' => $id,
-            'tittle' => $tittle,
-            'body' => $body
-        ];
+        $result = compact('id', 'tittle', 'body');
 
         $sql->execute($result);
 
