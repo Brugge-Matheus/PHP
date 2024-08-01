@@ -2,7 +2,7 @@
 
 header("Content-Type: application/json; charset=UTF-8");
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] === "GET") {
     if (!isset($_GET['value1']) and !isset($_GET['value2'])) {
         $array = array(
             'status' => 'error',

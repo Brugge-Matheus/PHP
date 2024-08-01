@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/PHP/EX/ex_poo/vendor/composer" />
+      <path value="$PROJECT_DIR$/webp/vendor/calcinai/php-imagick" />
+      <path value="$PROJECT_DIR$/webp/vendor/composer" />
+      <path value="$PROJECT_DIR$/PHP/EX/ex_autload_namespace/vendor/composer" />
+      <path value="$PROJECT_DIR$/study/whoops/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/study/whoops/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/study/whoops/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/study/whoops/vendor/composer" />
+      <path value="$PROJECT_DIR$/study/whoops/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/study/whoops/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/study/whoops/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/study/whoops/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/study/whoops/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/study/composer/vendor/composer" />
+      <path value="$PROJECT_DIR$/study/composer/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/study/composer/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/study/composer/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/PHP/Composer/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/PHP/Composer/vendor/composer" />
+      <path value="$PROJECT_DIR$/PHP/Composer/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/PHP/EX/ex_autoload/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.1">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+</project>
