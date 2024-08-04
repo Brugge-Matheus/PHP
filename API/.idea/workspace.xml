@@ -5,21 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a94abcfb-1805-479f-be06-0e470fc0458c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/API.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Read.me" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/delete.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/get.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/getall.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/insert.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/ping.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/.idea/API_GET_POST.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/DELETE/curl_Delete.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/DELETE/delete.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/GET/curl_get.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/GET/get.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/HTTP_AUTH/API_KEY/api_key.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/HTTP_AUTH/API_KEY/curl_api_key.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/HTTP_AUTH/BASIC_AUTH/basic.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/HTTP_AUTH/BASIC_AUTH/curl_basic.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/POST/curl_post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/POST/curl_request.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/PUT/curl_put.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_SIMPLE/API_GET_POST/PUT/put.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +51,7 @@
     "full.screen.before.presentation.mode": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/xampp/htdocs/PHP/API/API_SIMPLE",
+    "last_opened_file_path": "C:/xampp/htdocs/PHP/API",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,6 +82,7 @@
       <workItem from="1722381460978" duration="127000" />
       <workItem from="1722381599377" duration="389000" />
       <workItem from="1722382005324" duration="2009000" />
+      <workItem from="1722650114177" duration="1011000" />
     </task>
     <servers />
   </component>
